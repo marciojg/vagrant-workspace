@@ -7,18 +7,11 @@ apt-get dist-upgrade -y
 # Basic dependencies.
 apt-get install -y wget dpkg sed curl git zip unzip ssh vim w3m
 
-# GUI.
-apt-get install -y lubuntu-desktop
+# SSH Conection
+apt-get install -y openssh-server
 
-# Google Chrome.
-wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-dpkg -i google-chrome-stable_current_amd64.deb
-apt-get install -f -y
-
-# Visual Studio Code.
-wget -O vscode.deb https://go.microsoft.com/fwlink/?LinkID=760868
-dpkg -i vscode.deb
-apt-get install -f -y
+# SSH start
+service ssh status
 
 # Docker.
 apt-get install -y containerd
