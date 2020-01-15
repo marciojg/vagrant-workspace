@@ -8,7 +8,7 @@ Vagrant.configure('2') do |config|
   config.vm.provision        'shell', privileged: true, path: 'vagrant.sh'
 
   config.vm.provider 'virtualbox' do |v|
-    v.gui       = true
+    v.gui       = false
     v.memory    = ENV['VAGRANT_WORKSPACE_MEMORY_IN_MB'].to_s
     v.cpus      = ENV['VAGRANT_WORKSPACE_CPUS'].to_s
     v.customize ['modifyvm', :id, '--clipboard',    'bidirectional']
